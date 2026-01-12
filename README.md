@@ -1,4 +1,4 @@
-# Splitser/WieBetaaltWat HTML to CSV Converter
+# Splitser/WieBetaaltWat HTML to CSV Converter (Dutch/NL below)
 
 This tool extracts transaction data from a **Splitser (WieBetaaltWat)** GDPR data export and saves it as a CSV file.
 
@@ -41,3 +41,45 @@ The script targets the specific HTML table structures used in the Splitser expor
 
 ## Disclaimer
 This project is independent and not affiliated with Splitser or WieBetaaltWat. It is designed to help users exercise their right to data portability.
+# NL/Dutch, Splitser/WieBetaaltWat HTML naar CSV-Converter
+
+Deze tool extraheert transactiegegevens uit een **Splitser (WieBetaaltWat)** AVG-data-export en slaat deze op als een CSV-bestand.
+
+Wanneer u uw gegevens opvraagt onder de AVG (GDPR), levert Splitser een `.zip`-bestand met daarin een `index.html`-bestand. Hoewel dit bestand leesbaar is in een browser, is het niet gestructureerd voor data-analyse. Dit script parseert de HTML en converteert deze naar een overzichtelijke spreadsheet.
+
+## Hoe u gratis uw gegevens kunt verkrijgen
+
+U heeft geen Premium-abonnement nodig om uw gegevens te exporteren. Onder de AVG heeft u het recht op gratis toegang tot uw gegevens.
+
+1.  **Verzoek:** Neem contact op met de [Splitser Support](support.wiebetaaltwat.nl) en vraag om een volledige export van uw persoonsgegevens (AVG/GDPR-verzoek).
+2.  **Downloaden:** U ontvangt een link naar een `.zip`-bestand.
+3.  **Uitpakken:** Pak de map uit om het `index.html`-bestand te vinden.
+
+## Gebruik
+
+### 1. Installeer afhankelijkheden
+Dit script vereist `BeautifulSoup4` voor het parsen van de HTML:
+
+```bash
+pip install beautifulsoup4
+```
+
+### 2. Configureer het bestandspad
+Voordat u het script uitvoert, moet u het verwijzen naar de locatie van uw index.html. Open het Python-bestand en werk de FILE_PATH-variabele bij:
+python
+#### Pas dit aan naar de daadwerkelijke locatie van uw index.html-bestand
+```
+FILE_PATH = r'C:\vscodeProjects\klresearchtbvpotentiaal\models\base\index.html'
+```
+
+### 3. Voer het script uit
+```bash
+python converter.py
+```
+
+### 4. Resultaat
+Het script genereert een .csv-bestand in dezelfde map, dat kan worden geopend in Excel of Google Sheets.
+## Hoe het werkt
+Het script richt zich op de specifieke HTML-tabelstructuren die in de Splitser-export worden gebruikt. Het identificeert rijen en kolommen met datums, beschrijvingen en bedragen, en zorgt ervoor dat de gegevens correct worden omgezet naar een CSV-formaat.
+## Disclaimer
+Dit project is onafhankelijk en niet gelieerd aan Splitser of WieBetaaltWat. Het is ontworpen om gebruikers te helpen hun recht op dataportabiliteit uit te oefenen.
