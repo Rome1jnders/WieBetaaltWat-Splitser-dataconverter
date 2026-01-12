@@ -30,9 +30,9 @@ FILE_PATH = r'C:\vscodeProjects\klresearchtbvpotentiaal\models\base\index.html'
 ```
 
 ### 3. Run the script
-bash
+```bash
 python converter.py
-Wees voorzichtig met code.
+```
 
 ### 4. Result
 The script will generate a .csv file in the same directory, which can be opened in Excel or Google Sheets.
